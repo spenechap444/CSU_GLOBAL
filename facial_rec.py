@@ -75,13 +75,13 @@ class FaceID:
         
 
 def main():
-    img_path = '/Users/spencerchapman/Documents/CSU_GLOBAL/CSC515/mugshot2.jpg'
+    img_path = '/Users/spencerchapman/Google Drive/My Drive/CSU_GLOBAL/CSC580/Module_1/mugshot2.jpg'
     img2_path = '/Users/spencerchapman/Google Drive/My Drive/CSU_GLOBAL/CSC580/Module_1/group_pic.png'
-    img3_path = ''
-    init_img = cv2.cvtColor(cv2.imread(img2_path), cv2.COLOR_BGR2RGB)
+    img3_path = '/Users/spencerchapman/Google Drive/My Drive/CSU_GLOBAL/CSC580/Module_1/mugshot1.jpg'
+    init_img = cv2.cvtColor(cv2.imread(img3_path), cv2.COLOR_BGR2RGB)
     img = FaceID(init_img)
     faces = img.ID_face()
-    img.ID_eyes(faces, 'points')
+    img.ID_eyes(faces, 'both', False)
     plt.imshow(img.imgd)
 
 main()
